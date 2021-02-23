@@ -25,5 +25,4 @@
 - [ActiveRecordのincludes, preload, eager_load の個人的な使い分け](https://moneyforward.com/engineers_blog/2019/04/02/activerecord-includes-preload-eagerload/)
 - [Rails: JOINすべきかどうか、それが問題だ — #includesの振舞いを理解する（翻訳）](https://techracho.bpsinc.jp/hachi8833/2017_09_25/45650)
 - [なぜ、SQLは重たくなるのか？──『SQLパフォーマンス詳解』の翻訳者が教える原因と対策](https://eh-career.com/engineerhub/entry/2017/06/26/110000#%E5%8E%9F%E5%9B%A0ORM%E3%81%8C%E7%94%9F%E6%88%90%E3%81%99%E3%82%8BSQL%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84)
-- 
 
