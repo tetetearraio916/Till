@@ -26,10 +26,11 @@ where emp_no = 499999;
 
 ## ActiveRecordの場合
 ```rb
-Salary.where(emp_no: 499999, to_date: '2001-11-29')
+Salary.all.where("emp_no = 499999 and to_date >= '2001-01-01' and from_date <= '2001-01-01'" )
+
 ```
 
-[![Image from Gyazo](https://i.gyazo.com/154d60d41363f993cef3199ce6caf303.png)](https://gyazo.com/154d60d41363f993cef3199ce6caf303)
+[![Image from Gyazo](https://i.gyazo.com/5c004ef99f3fac5d4589e90b871bda05.png)](https://gyazo.com/5c004ef99f3fac5d4589e90b871bda05)
 
 ## SQLの場合
 ```sql
