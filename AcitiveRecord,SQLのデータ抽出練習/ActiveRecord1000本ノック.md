@@ -5,6 +5,8 @@
 
 [![Image from Gyazo](https://i.gyazo.com/37abe2c09983333201b36249278f3a78.png)](https://gyazo.com/37abe2c09983333201b36249278f3a78)
 
+<br>
+
 # 従業員番号が499999の従業員の給料全てを取得してください
 ## ActiveRecordの場合
 ```rb
@@ -21,6 +23,7 @@ where emp_no = 499999;
 
 [![Image from Gyazo](https://i.gyazo.com/1b7b1f658d291f61ec39b9af4d2576ed.png)](https://gyazo.com/1b7b1f658d291f61ec39b9af4d2576ed)
 
+<br>
 
 # 従業員番号が499999の従業員の2001-01-01時点の給料を取得してください
 
@@ -44,6 +47,8 @@ and from_date <= '2001-01-02';
 
 [![Image from Gyazo](https://i.gyazo.com/a83298c85c04845dd516226d87a3aafd.png)](https://gyazo.com/a83298c85c04845dd516226d87a3aafd)
 
+<br>
+
 # 150000以上の給料をもらったことがある従業員の一覧を取得してください
 
 ## ActiveRecordの場合
@@ -66,6 +71,8 @@ where s.salary >= 150000;
 
 [![Image from Gyazo](https://i.gyazo.com/3b2dec760bdea0c5d23975babd6d7135.png)](https://gyazo.com/3b2dec760bdea0c5d23975babd6d7135)
 
+<br>
+
 # 150000以上の給料をもらったことがある女性従業員の一覧を取得してください
 
 ## ActiveRecordの場合
@@ -86,6 +93,8 @@ and e.gender = 'F';
 ```
 [![Image from Gyazo](https://i.gyazo.com/fe26f62bb00d236c9e7183d272c6b154.png)](https://gyazo.com/fe26f62bb00d236c9e7183d272c6b154)
 
+<br>
+
 # どんな肩書きがあるか一覧で取得してきてください
 
 ## ActiveRecordの場合
@@ -103,6 +112,8 @@ from titles
 group by title;
 ```
 [![Image from Gyazo](https://i.gyazo.com/30ef0981c1d36d6f8a824e10d7b0eba0.png)](https://gyazo.com/30ef0981c1d36d6f8a824e10d7b0eba0)
+
+<br>
 
 # 2000-1-29以降に肩書きが「Technique Leader」になった従業員を取得してください
 
@@ -125,7 +136,7 @@ and from_date >= '2000-01-29';
 
 [![Image from Gyazo](https://i.gyazo.com/6d348907352ac328bf29f1da469e5349.png)](https://gyazo.com/6d348907352ac328bf29f1da469e5349)
 
-
+<br>
 
 # 部署番号がd001である部署のマネージャー歴代一覧を取得してきてください
 
@@ -150,6 +161,7 @@ where d.dept_no = 'd001';
 
 [![Image from Gyazo](https://i.gyazo.com/64b6565d51fcc73b14387658d10ba7b3.png)](https://gyazo.com/64b6565d51fcc73b14387658d10ba7b3)
 
+<br>
 
 # 歴代マネージャーにおける男女比を出してください
 ## ActiveRecordの場合
@@ -171,6 +183,7 @@ group by e.gender;
 ```
 [![Image from Gyazo](https://i.gyazo.com/046b992d94410eee0dde731360a12fe6.png)](https://gyazo.com/046b992d94410eee0dde731360a12fe6)
 
+<br>
 
 # 部署番号がd004の部署における1999-1-1時点のマネージャーを取得してください
 
@@ -194,6 +207,7 @@ Employee.joins(dept_managers: :department).where("departments.dept_no = 'd004' a
 ```
 [![Image from Gyazo](https://i.gyazo.com/833b45c3226741a26f67618785ffbac1.png)](https://gyazo.com/833b45c3226741a26f67618785ffbac1)
 
+<br>
 
 # 従業員番号が10001, 10002, 10003の従業員が今までに稼いだ給料の合計を従業員ごとに集計してください
 ## ActiveRecordの場合
@@ -212,6 +226,8 @@ group by emp_no;
 ```
 
 [![Image from Gyazo](https://i.gyazo.com/a3d08ad0fed11d977f5f45c399485a26.png)](https://gyazo.com/a3d08ad0fed11d977f5f45c399485a26)
+
+<br>
 
 # 上記に加えtotal_salaryという仮のフィールドを作ってemployeeの情報とがっちゃんこしてください。
 ## ActiveRecordの場合
@@ -233,6 +249,8 @@ group by emp_no;
 ```
 
 [![Image from Gyazo](https://i.gyazo.com/5b8b8ad96f80bed23a7c12abd6aa1825.png)](https://gyazo.com/5b8b8ad96f80bed23a7c12abd6aa1825)
+
+<br>
 
 # 上記の結果を利用してコンソール上に以下のようなフォーマットでputsしてください。
 ```rb
