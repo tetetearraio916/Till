@@ -19,7 +19,7 @@ where emp_no = 499999;
 
 ## ActiveRecordの場合
 ```rb
-Salary.all.where("emp_no = 499999 and to_date >= '2001-01-01' and from_date <= '2001-01-01'" )
+Salary.where(emp_no: 499999).where('from_date <= ? ', 20010101).where('to_date >= ?', 20010101)
 
 ```
 
@@ -169,10 +169,10 @@ group by e.gender;
 
 ## ActiveRecordの場合
 ```rb
-Employee.joins(dept_managers: :department).where("departments.dept_no = 'd004' and dept_manager.to_date >= '1999-01-01'")
+ Employee.joins(dept_managers: :department).where( departments: {dept_no: "d004"}).where('dept_manager.to_date >= ?',19990101).where('dept_manager.from_date <= ?',19990101)
 ```
 
-[![Image from Gyazo](https://i.gyazo.com/0cd0378c51982379434532512de7faea.png)](https://gyazo.com/0cd0378c51982379434532512de7faea)
+[![Image from Gyazo](https://i.gyazo.com/87170d340d13e1e0c9217a85ccf83db8.png)](https://gyazo.com/87170d340d13e1e0c9217a85ccf83db8)
 
 ## SQLの場合
 ```sql
